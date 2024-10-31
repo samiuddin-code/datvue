@@ -1,0 +1,154 @@
+.press-news-articles-card {
+  .articles-card {
+    position: relative;
+
+    .card-back {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        min-height: 80vh;
+      }
+      @media screen and (max-width: 750px) {
+        min-height: 95vh;
+      }
+      @media screen and (max-width: 500px) {
+        min-height: 100vh;
+      }
+      @media screen and (max-width: 330px) {
+        min-height: 150vh;
+      }
+
+      .image {
+        overflow: hidden;
+        img {
+          height: 100vh;
+
+          @media screen and (max-width: 1024px) {
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .card-front {
+      background: #fff;
+      position: absolute;
+      right: 0;
+      top: 4rem;
+      width: 40%;
+      height: calc(100% - 8rem);
+      padding: 4rem;
+
+      @media screen and (max-width: 1024px) {
+        width: calc(100% - 4rem);
+        margin: 0 2rem;
+        height: auto;
+        padding-right: 45%;
+        bottom: auto;
+        top: 20rem;
+        right: auto;
+      }
+      @media screen and (max-width: 500px) {
+        top: 10rem;
+        right: auto;
+        bottom: 0;
+        width: calc(100% - 2rem);
+        height: 70%;
+        margin: 0 1rem;
+        padding: 2rem;
+      }
+      @media screen and (max-width: 330px) {
+        min-height: 80%;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media screen and (max-width: 1024px) {
+        justify-content: stretch;
+        gap: 2rem;
+      }
+
+      .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @media screen and (max-width: 500px) {
+          gap: 0.5rem;
+        }
+        .title {
+          color: #777;
+        }
+        .subtitle {
+          font-size: 2.5rem;
+          font-weight: normal;
+          line-height: 2.5rem;
+          font-family: "Poppins", sans-serif;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+          }
+          @media screen and (max-width: 500px) {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+          }
+        }
+      }
+
+      .content {
+        color: #777;
+        font-size: 1.1rem;
+        line-height: 2rem;
+
+        @media screen and (max-width: 1024px) {
+          line-height: 1.4rem;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .button {
+        button {
+          border: solid 1px #acacac;
+          background: transparent;
+          outline: none;
+
+          color: #777;
+          padding: 1rem 2.5rem;
+          cursor: pointer;
+          transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        button:hover {
+          border-color: #333;
+          color: #333;
+        }
+      }
+    }
+  }
+  .pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    @media screen and (max-width: 1024px) {
+        position: relative;
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+  }
+}

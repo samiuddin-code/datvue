@@ -1,0 +1,26 @@
+.about-dlc {
+  .about-dlc-title {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .bakers-image-section {
+    margin-bottom: 8rem;
+    @media screen and (max-width: 500px) {
+      margin-bottom: 2rem;
+    }
+    .bakers-image {
+      width: 100%;
+      padding: 0 4rem;
+      @media screen and (max-width: 500px) {
+        padding: 0 1rem;
+      }
+    }
+  }
+  .larger-image-section{
+    padding-top: 4rem;
+    img.larger-image {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.press-news-articles {
+  background: #f3f3f3;
+  .heading {
+    font-family: "Average", serif;
+    font-size: 3rem;
+    color: #333;
+    font-weight: normal;
+    padding: 4rem 8rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.8rem;
+      padding: 2rem;
+    }
+  }
+  .latest-card {
+    padding: 0 4rem;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+    }
+  }
+}
