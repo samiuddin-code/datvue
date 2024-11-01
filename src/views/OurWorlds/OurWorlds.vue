@@ -15,5 +15,5 @@
 <script type="module" src="./OurWorlds.ts"></script>
 
 <style scoped lang="scss">
-@import "./OurWorlds";
+@use "./OurWorlds";
 </style>

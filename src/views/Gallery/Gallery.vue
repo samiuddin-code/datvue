@@ -17,5 +17,5 @@
 <script type="module" src="./Gallery.ts"></script>
 
 <style scoped lang="scss">
-@import "./Gallery";
+@use"./Gallery";
 </style>

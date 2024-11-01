@@ -32,5 +32,5 @@
 <script type="module" src="./PressArticles.ts"></script>
 
 <style lang="scss" scoped>
-@import "./PressArticles";
+@use "./PressArticles";
 </style>

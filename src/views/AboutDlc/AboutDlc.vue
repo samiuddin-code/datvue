@@ -33,5 +33,5 @@
 <script type="module" src="./AboutDlc.ts"></script>
 
 <style scoped lang="scss">
-@import "./AboutDlc";
+@use "./AboutDlc";
 </style>

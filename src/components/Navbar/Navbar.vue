@@ -41,5 +41,5 @@
 <script type="module" src="./Navbar.ts"></script>
 
 <style lang="scss" scoped>
-@import "./Navbar";
+@use "./Navbar";
 </style>

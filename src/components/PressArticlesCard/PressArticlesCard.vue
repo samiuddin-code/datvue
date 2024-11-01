@@ -13,5 +13,5 @@
 <script type="module" src="./PressArticlesCard.ts"></script>
 
 <style lang="scss" scoped>
-@import "./PressArticlesCard";
+@use "./PressArticlesCard";
 </style>

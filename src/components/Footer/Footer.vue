@@ -64,5 +64,5 @@
 <script type="module" src="./Footer.ts"></script>
 
 <style scoped lang="scss">
-  @import "./Footer";
+  @use "./Footer";
 </style>

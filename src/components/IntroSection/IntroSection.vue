@@ -29,5 +29,5 @@
 <script type="module" src="./IntroSection.ts"></script>
 
 <style lang="scss" scoped>
-@import "./IntroSection";
+@use "./IntroSection";
 </style>

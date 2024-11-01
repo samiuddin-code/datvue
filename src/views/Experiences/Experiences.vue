@@ -38,5 +38,5 @@
 <script type="module" src="./Experiences.ts"></script>
 
 <style lang="scss" scoped>
-@import "./Experiences";
+@use "./Experiences";
 </style>

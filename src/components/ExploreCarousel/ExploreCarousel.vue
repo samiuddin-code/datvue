@@ -29,5 +29,5 @@
 <script type="module" src="./ExploreCarousel.ts"></script>
 
 <style scoped lang="scss">
-@import "./ExploreCarousel";
+@use"./ExploreCarousel";
 </style>

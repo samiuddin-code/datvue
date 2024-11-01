@@ -11,5 +11,5 @@
 <script type="module" src="./OurWorldsCard.ts"></script>
 
 <style scoped lang="scss">
-@import "./OurWorldsCard";
+@use "./OurWorldsCard";
 </style>

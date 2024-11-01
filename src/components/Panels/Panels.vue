@@ -24,5 +24,5 @@
 <script type="module" src="./Panels.ts"></script>
 
 <style lang="scss" scoped>
-@import "./Panels";
+@use "./Panels";
 </style>

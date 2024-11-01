@@ -25,5 +25,5 @@
 <script type="module" src="./Home.ts"></script>
 
 <style scoped lang="scss">
-@import "./Home";
+@use "./Home";
 </style>

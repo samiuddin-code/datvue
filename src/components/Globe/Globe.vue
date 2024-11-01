@@ -104,5 +104,5 @@
 <script type="module" src="./Globe.ts"></script>
 
 <style scoped lang="scss">
-@import "./Globe";
+@use "./Globe";
 </style>

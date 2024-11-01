@@ -11,5 +11,5 @@
 <script type="module" src="./BottomSection.ts"></script>
 
 <style lang="scss" scoped>
-@import "./BottomSection";
+@use "./BottomSection";
 </style>

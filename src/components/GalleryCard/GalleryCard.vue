@@ -8,5 +8,5 @@
 <script type="module" src="./GalleryCard.ts"></script>
 
 <style scoped lang="scss">
- @import "./GalleryCard"
+ @use "./GalleryCard"
 </style>

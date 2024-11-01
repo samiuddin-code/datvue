@@ -13,7 +13,7 @@
 <script type="module" src="./Title.ts"></script>
 
 <style lang="scss" scoped>
-@import "./Title";
+@use "./Title";
 
 .main-bg {
   width: 100%; /* Full width */

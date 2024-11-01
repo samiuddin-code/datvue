@@ -27,5 +27,5 @@
 <script type="module" src="./TxtImg2.ts"></script>
 
 <style scoped lang="scss">
-@import "./TxtImg2";
+@use"./TxtImg2";
 </style>

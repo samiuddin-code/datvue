@@ -11,5 +11,5 @@
 <script type="module" src="./PressNewsArticles.ts"></script>
 
 <style lang="scss" scoped>
-@import "./PressNewsArticles";
+@use "./PressNewsArticles";
 </style>

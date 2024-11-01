@@ -38,5 +38,5 @@
 <script type="module" src="./PressNewsArticlesCard.ts"></script>
 
 <style lang="scss" scoped>
-@import "./PressNewsArticlesCard";
+@use "./PressNewsArticlesCard";
 </style>
