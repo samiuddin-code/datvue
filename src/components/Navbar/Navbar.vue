@@ -15,10 +15,10 @@
       </div>
       <div id="nav-links" :class="{ 'is-toggled': isToggled }">
         <router-link @click="isToggled = false" to="/about-dlc">
-          <p class="hover-underline-animation">About DLC</p>
+          <p class="hover-underline-animation">About DAT</p>
         </router-link>
         <router-link @click="isToggled = false" to="/our-worlds">
-          <p class="hover-underline-animation">Our Worlds</p>
+          <p class="hover-underline-animation">Our Expertise</p>
         </router-link>
         <router-link @click="isToggled = false" to="/experiences">
           <p class="hover-underline-animation">Experiences</p>
