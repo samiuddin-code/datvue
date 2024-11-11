@@ -1,13 +1,13 @@
 <template>
   <div class="about-dlc">
     <div class="about-dlc-title">
-      <Title :bText="elements.boldText" :lText="elements.lightText" :imageBg="require('../../assets/aboutBg.jpg')"/>
+      <Title :bText="elements.boldText" :lText="elements.lightText" :imageBg="require('../../assets/aboutBg.png')"/>
     </div>
       <IntroSection :paragraphs="elements.introParas" :title="elements.title" :txtParagraphs="elements.txtParagraphs" :image="require('../../assets/IntroSection/AboutDlc.jpg')"/>
       <div class="bakers-image-section">
       <img
         class="bakers-image"
-        :src="require('../../assets/AboutDlc/Bakers_Carousel.jpg')"
+        :src="require('../../assets/AboutDlc/Restaurant.jpg')"
         alt="BakersImg"
       />
     </div>
@@ -20,7 +20,7 @@
       />
       <TxtImg2 :header1="elements.headerMirror" :paragraph="elements.paragraphMirror" :imgRight="elements.imgRightMirror" :imgLeft="elements.imgLeftMirror" :mirror="true"/>
       <img
-        :src="require('../../assets/AboutDlc/GolfClubHouse.jpg')"
+        :src="require('../../assets/AboutDlc/basement.png')"
         alt="Restaurant"
         class="larger-image"
       />

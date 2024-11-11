@@ -33,106 +33,82 @@ import Panels from "@/components/Panels/Panels.vue";
   },
   created(){
     this.elements = {
-      boldText: "Discover",
-      lightText: "your world",
+     
+      boldText: "  Experience",
+      lightText: "   the Opulent luxury living",
       video: require("@/assets/discovery.mp4"),
-      header1: "Welcome to",
-      header2: "our world",
-      paragraph: "DAT Engineering Consultancy is accounted among the top engineering consultant companies in the UAE,\
-      consisting of highly qualified and motivated architects and engineers who provide full support to clients\
-       and projects at every stage of the development and completion process. Our expert teams from the main \
-       headquarter in Dubai and branches in Abu Dhabi, Sharjah, and India are effectively shaping up projects\
-        aiming to create modernized living environments. Innovation and sustainability\
-      have been our priority in line with the UAE's vision and expedited modernization through our high-quality services.\
-         unforgettable moments, together.",
+      header1: "Discover",
+      header2: " Luxury Beyond Limits",
+      paragraph: "Discover a new era of luxury with DAT, home that creates an aura of exceptionally crafted luxury, comfort, and eternal elegance combined. Every detail is added thoughtfully to enhance your lifestyle and living experience. Step into a home that is not only designed to impress, but inspire. At DAT, we translate your dream into reality,  setting a new standard for what luxury living truly means.",
       imgRight: require('@/assets/TxtImg2/TxtImg1.jpg'),
       imgLeft: require('@/assets/TxtImg2/TxtImg2.jpg'),
       carousel: [
         {
-          pic: "p1.jpg",
+          pic: "p1.png",
           title: "NORTH SHORE PRESERVE",
           location: `Kaua'i, Hawaii`,
         },
         {
-          pic: "p2.jpg",
+          pic: "p2.png",
           title: "JAMES ISLAND",
           location: `Southern Gulf Islands, British Columbia, Canada`,
         },
         {
-          pic: "p3.jpg",
+          pic: "p3.png",
           title: "COSTATERRA",
           location: `Comporta, Portugal`,
         },
         {
-          pic: "p4.jpg",
+          pic: "p4.png",
           title: "BARBUDA OCEAN CLUB",
           location: `Barbuda, West Indies`,
         },
         {
-          pic: "p5.jpg",
+          pic: "p5.png",
           title: "DRIFTWOOD",
           location: `Austin, Texas`,
         },
         {
-          pic: "p6.jpg",
+          pic: "p6.png",
           title: "TROUBADOUR",
           location: `Nashville, Tennessee`,
         },
         {
-          pic: "p7.jpg",
+          pic: "p7.png",
           title: "PLAYA GRANDE",
           location: `Rio San Juan, Dominican Republic`,
         },
         {
-          pic: "p8.jpg",
+          pic: "p8.png",
           title: "CHILENO BAY",
           location: `Cabo San Lucas, Mexico`,
         },
         {
-          pic: "p9.jpg",
+          pic: "p9.png",
           title: "THE SUMMIT",
           location: `Las Vegas, Nevada`,
         },
         {
-          pic: "p10.jpg",
+          pic: "p10.png",
           title: "DUNE DECK",
           location: `Westhamton Beach, NY`,
         },
         {
-          pic: "p11.jpg",
+          pic: "p11.png",
           title: "SILO RIDGE",
           location: `Amenia, New York`,
         },
         {
-          pic: "p12.jpg",
+          pic: "p12.png",
           title: "MAKENA",
           location: `Maui, Hawaii`,
         },
         {
-          pic: "p13.jpg",
+          pic: "p13.png",
           title: "YELLOWSTONE CLUB",
           location: `Big Sky, Montana`,
         },
-        {
-          pic: "p14.jpg",
-          title: "GOZZER RANCH",
-          location: `Coeur d'Alene, Idaho`,
-        },
-        {
-          pic: "p15.jpg",
-          title: "EL DORADO",
-          location: `Los Gabos, Mexico`,
-        },
-        {
-          pic: "p16.jpg",
-          title: "MADISON",
-          location: `La Quinta, California`,
-        },
-        {
-          pic: "p17.jpg",
-          title: `BAKER'S BAY`,
-          location: `Great Guana Cay, Behamas`,
-        },
+
         {
           pic: "p18.jpg",
           title: "HIDEAWAY",
@@ -175,7 +151,7 @@ import Panels from "@/components/Panels/Panels.vue";
         },
       ],
       carouselH1: "Explore",
-      carouselH2: "our worlds",
+      carouselH2: "Our Projects",
     }
   }
 })

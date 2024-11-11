@@ -14,7 +14,8 @@
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": false,
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "three"  // Ensure TypeScript knows to use the three.js types
     ],
     "paths": {
       "@/*": [

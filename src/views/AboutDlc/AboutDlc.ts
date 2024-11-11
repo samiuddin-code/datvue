@@ -37,22 +37,27 @@ import BottomSection from "@/components/BottomSection/BottomSection.vue";
   },
   created() {
     this.elements = {
-      boldText: "Creating your",
-      lightText: "perfect world",
+      boldText: "Discover the Luxury",
+      lightText: "Sanctuary of Your Dreams",
       introParas: [
-        "Founded in 1994 by Mike Meldman, Discovery Land Company is",
-        "a US-based real estate developer and operator of private residential",
-        "club communities and resorts with a world-renowned portfolio of",
-        "domestic and international properties.",
+        
+        "Since its establishment in 2014, DAT has been at the forefront of innovation,",
+        "offering state-of-the-art architectural and engineering solutions that push the",
+        "boundaries of design. Firmly rooted in passion, expertise, and a relentless drive",
+        "for excellence, we pride ourselves on delivering visionary solutions that fulfill and .",
+
+        "often surpass our clients' expectations. Years of experience empower us to offer",
+        "exceptional, high-quality services, establishing DAT as one of the leading ",
+        "architecture firms within the industry.",
       ],
-      title: "Our Mission",
+      title: "Our Vision",
       txtParagraphs: [
-        "We don’t build buildings, but rather we build settings where families can create intergenerational memories and enrich their lives in exquisite and untouched sanctuaries. Everything we do is driven by the fundamental desire to create spaces where families can be together.",
-        "These settings offer a relaxed and comfortable sense of community featuring outstanding clubhouses, incredible residential offerings, premier golf courses, welcoming staff, world-class culinary offerings and our custom Outdoor Pursuits program; all offering the highest of service standards to enrich your experience.",
+        "At DAT, we turn spaces into unique, memorable retreats where families bond and make memories to last. Drawing inspiration from the beauty of nature, we strive to create outstanding, ",
+        "one-off environments that should enrich life and bring generations closer together in a perfect blend of luxury, comfort, and timeless design.",
       ],
       carousel: [
         {
-          pic: "p1.jpg",
+          pic: "p1.png",
           title: "Focus on family",
           location: `Our properties have always been inspired by and created for families. We build settings that are as welcoming to everyone as they are exclusive.`,
         },
@@ -74,10 +79,10 @@ import BottomSection from "@/components/BottomSection/BottomSection.vue";
         {
           pic: "p5.jpg",
           title: "Luxury bespoke homes",
-          location: `Through our in-house services, Discovery Builders and Discovery Design, we offer turn-key homes for families that embody modern aesthetics while staying true to classic principles.`,
+          location: `Through  in-house services, Discovery Builders and Discovery Design, we offer turn-key homes for families that embody modern aesthetics while staying true to classic principles.`,
         },
         {
-          pic: "p1.jpg",
+          pic: "p1.png",
           title: "Focus on family",
           location: `Our properties have always been inspired by and created for families. We build settings that are as welcoming to everyone as they are exclusive.`,
         },
@@ -102,16 +107,16 @@ import BottomSection from "@/components/BottomSection/BottomSection.vue";
           location: `Through our in-house services, Discovery Builders and Discovery Design, we offer turn-key homes for families that embody modern aesthetics while staying true to classic principles.`,
         },
       ],
-      carouselH1: "The Discovery Difference",
-      header1: "Discovery Builders",
+      carouselH1: "The Discovery Story",
+      // header1: "Discovery Builders",
       paragraph:
-        "Every Discovery property is wonderfully in-tune with its natural surroundings - a harmonious blend of the architecturally impressive with the environmentally sensitive. And your every expectation will be met, with our meticulous eye for detail matching outstanding levels of craftsmanship and master building.",
-      imgRight: require("@/assets/TxtImg2/AboutDlc/TxtImg1.jpg"),
-      imgLeft: require("@/assets/TxtImg2/AboutDlc/TxtImg2.jpg"),
+        "At DAT Architecture, we specialize in creating architectural masterpieces that harmonize effortlessly with their natural surroundings. Our designs are a perfect blend of bold, innovative architecture and sustainable practices, ensuring every structure not only captivates but also respects the environment. With DAT, every project reflects our unwavering commitment to precision, exceptional craftsmanship, and visionary design, delivering results that consistently exceed your expectations.",
+       imgRight: require("@/assets/TxtImg2/AboutDlc/TxtImg1.jpg"),
+       imgLeft: require("@/assets/TxtImg2/AboutDlc/TxtImg2.jpg"),
       headerMirror: "Discovery Design",
       paragraphMirror: "See the beauty in every corner of your new, bespoke home away from home. From fabrics and furniture pieces to floorplans, our professional designers will collaborate closely with you to create an interior living space which reflects your style and unique tastes as well as perfectly complementing your lifestyle.",
       imgRightMirror: require("@/assets/TxtImg2/AboutDlc/TxtImg1Mirror.jpg"),
-      imgLeftMirror: require("@/assets/TxtImg2/AboutDlc/TxtImg2Mirror.jpg"),
+      // imgLeftMirror: require("@/assets/TxtImg2/AboutDlc/TxtImg2Mirror.png"),
     };
   },
 })

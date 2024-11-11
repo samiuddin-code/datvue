@@ -17,8 +17,11 @@
       :carousel="elements.carousel" 
       worldPath="OurWorlds" 
     />
+    
     <Globe />
     <Panels />
+    <ContactInfo/>
+    <ContactD/>
   </div>
 </template>
 

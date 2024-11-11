@@ -1,58 +1,94 @@
+/* Fullscreen background video */
 video.main-bg {
-  min-width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.title {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video covers the entire screen while maintaining aspect ratio */
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0; /* Places the video behind all other elements */
+}
+
+/* Dark overlay with smoother, subtle effect */
+.main-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
 
-  .bold-text,
-  .light-text {
-    text-align: left;
-    font-size: 6rem;
-    display: block;
-    line-height: 5rem;
-    font-weight: 100;
-    padding: 0 20rem;
+  transition: background 0.3s ease; /* Smooth transition */
+}
 
-    @media screen and (max-width: 1024px) {
-      font-size: 3rem;
-      line-height: 2.5rem;
-    }
-    @media screen and (max-width: 500px) {
-      padding: 0 1rem;
-    }
-    @media screen and (min-width: 500.1px) and (max-width: 1024px) {
-      padding: 0 2rem;
-    }
-  }
-
-  .bold-text {
-    font-family: "Average", serif;
-  }
-
-  .scroll-text {
-    text-align: left;
-    color: hsla(0, 0%, 100%, 0.75);
-    padding: 15rem 0 0 12rem;
-    
-    @media screen and (max-width: 1024px) {
-      padding: 15rem 0 0 2rem;
-      font-size: 1rem;
-    }
-    @media screen and (max-width: 500px) {
-      padding: 15rem 0 0 1rem;
-    }
-  }
+/* Title container, centered vertically and horizontally */
+.title {
+  position: relative;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  height: 100vh; /* Full viewport height */
+  color: #fff;
+  text-align: center; /* Center-align text */
+  padding: 2rem;
+  pointer-events: none; /* Prevent interaction */
+}
+
+/* Bold text style */
+.bold-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 6vw, 6rem); /* Scales with the viewport */
+  line-height: clamp(4rem, 8vw, 6rem);
+  color: #fff; /* White color for bold text */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.bold-text:hover {
+  transform: scale(1.05); /* Slight scale-up effect */
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+/* Light text style */
+.light-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 4vw, 4rem); /* Dynamic size */
+  line-height: clamp(2rem, 5vw, 4rem);
+  color: hsla(0, 0%, 100%, 0.75);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Light shadow */
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.light-text:hover {
+  transform: scale(1.05); /* Hover effect */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  .bold-text {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .light-text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bold-text {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .light-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }

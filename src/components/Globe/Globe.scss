@@ -2,6 +2,7 @@
   background: #f3f3f3;
   padding-top: 2rem;
   position: relative;
+  margin-left: -2%;
   .globe-top {
     padding: 0 8rem;
     @media screen and (max-width: 1024px) {
@@ -175,7 +176,7 @@
         .image {
           height: 100%;
           position: absolute;
-          top: -4rem;
+          top: 0rem;
           right: 2.5rem;
           background-size: cover;
           background-repeat: no-repeat;

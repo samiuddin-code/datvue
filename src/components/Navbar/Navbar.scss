@@ -1,101 +1,224 @@
-.logo {
-  width: 10rem;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Average&display=swap');
+
+/* Root variables */
+:root {
+  --text-color: white;
+  --bg-color: transparent;
+  --hover-color: rgba(255, 255, 255, 0.8); /* Default hover color when text is white */
+  --luxury-gradient: linear-gradient(135deg, #FF5C8F, #FF9F43); /* Stunning gradient */
+  --luxury-glow: rgba(255, 255, 255, 0.7); /* Glow effect */
+  --luxury-bg: rgba(0, 0, 0, 0.8); /* Dark background for scrolled state */
+}#header {
+  position: relative;
+  z-index: 9999;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
 }
+
+#nav-links a {
+  color: #fff;
+  font-family: "Average", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: color 0.3s, transform 0.3s, letter-spacing 0.3s, text-shadow 0.3s ease;
+  position: relative;
+}
+
+#nav-links a:hover {
+  color: var(--luxury-gradient);
+  transform: scale(1.1);
+  letter-spacing: 0.3rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Change header on scroll */
+#header.scrolled #nav-links a {
+  color: #000; /* Change to black on scroll */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle glow when scrolled */
+}
+
+/* Fullscreen header */
 #header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   width: 100%;
   left: 0;
   top: 0;
   padding: 3rem 6rem;
-  @media screen and (max-width: 900px) {
-    & {
-      // & represents same class of the element
-      padding: 1rem;
-    }
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s ease, padding 0.3s ease;
+  will-change: background-color, color, padding;
+  box-shadow: none; /* No shadow by default */
+}
+
+/* When the header is scrolled */
+#header.scrolled {
+  --text-color: black;
+  transition: background-color 1.5s ease, padding 1.5s ease;
+  --bg-color: white;
+  --hover-color: rgba(0, 0, 0, 0.7); /* Hover color when text is black */
+  padding: 1.5rem 6rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Luxurious box shadow when scrolled */
+}
+
+/* Responsive header adjustments */
+@media screen and (max-width: 900px) {
+  #header {
+    padding: 1rem;
   }
 }
+
+/* Navigation bar styling */
 #nav {
   width: 94%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   @media screen and (max-width: 900px) {
     flex-direction: column;
   }
+}
 
-  #nav-logo {
-    .nav-toggler{
-      display: none;
-
-      background: inherit;
-      border: none;
-      outline: none;
-    }
-    @media screen and (max-width: 500px) {
-      &.is-toggled {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 2rem;
-      }
-      align-self: flex-start;
-      padding: 1rem;
-      width: 100%;
-      z-index: 1;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .nav-toggler {
-        display: inline;
-      }
-    }
+/* Logo adjustments */
+#nav-logo {
+  .nav-toggler {
+    display: none;
+    background: inherit;
+    border: none;
+    outline: none;
   }
 
-  #nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    column-gap: 4rem;
-    @media screen and (max-width: 900px) {
-      column-gap: 1rem;
-    }
-    @media screen and (max-width: 500px) {
-      background: hsl(0, 0%, 7%);
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 1rem;
-      transition: top 1s;
-
+  @media screen and (max-width: 500px) {
+    &.is-toggled {
       position: fixed;
+      top: 0;
       left: 0;
-      width: 100%;
-      height: 100vh;
-      padding: 1rem;
-      &.is-toggled {
-        top: 0;
-      }
-      &:not(.is-toggled) {
-        top: -200vh;
-      }
-      a {
-        font-family: "Average", serif;
-        font-size: 3.5rem;
-      }
+      padding: 2rem;
+    }
+
+    align-self: flex-start;
+    padding: 1rem;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-toggler {
+      display: inline;
     }
   }
 }
 
+/* Navigation links */
+#nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 4rem;
+
+  a {
+    color: var(--text-color); /* Default link color */
+    text-decoration: none;
+    font-family: "Average", serif;
+    font-weight: 600; /* Bold font */
+    font-size: 1.25rem; /* Increased font size */
+    transition: color 0.3s, transform 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      color: var(--hover-color); /* Hover color transition */
+      transform: scale(1.05); /* Slight zoom effect */
+    }
+  }
+  #nav-links a {
+    font-size: 2rem; /* Large text for ultra luxury */
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  #nav-links a:hover {
+    color: var(--luxury-gradient); /* Gradient hover effect */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glowing hover effect */
+    transform: scale(1.1); /* Subtle zoom effect */
+    letter-spacing: 0.2rem; /* Increased letter spacing */
+  }
+  @media screen and (max-width: 900px) {
+    column-gap: 1rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    background: hsl(0, 100%, 99%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    transition: top 0.5s ease;
+
+    &.is-toggled {
+      top: 0;
+    }
+
+    &:not(.is-toggled) {
+      top: -200vh;
+    }
+
+    a {
+      font-size: 3.5rem; /* Adjust font size on mobile */
+      color: var(--text-color);
+    }
+  }
+}
+.content {
+  margin-top: 80px; /* To make space for the fixed header */
+  height: 2000px; /* Example height to demonstrate scrolling */
+  padding: 20px;
+}
+
+/* SVG icon position */
+.scroll-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 5;
+}
+/* Logo */
+.logo {
+  width: 10rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(10deg); /* Subtle rotation effect on hover */
+  }
+}
+
+/* Hover underline animation */
 .hover-underline-animation {
   display: inline-block;
   position: relative;
   color: #fff;
+  transition: color 1.5s, transform 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .hover-underline-animation:after {
@@ -116,13 +239,44 @@
   transform-origin: bottom left;
 }
 
-a.router-link-exact-active{
-  p{
-    text-decoration: underline #fff;
-    text-underline-position: under;
-    text-decoration-thickness: 1px;
-  }
-  .hover-underline-animation:after{
-    height: 0;
-  }
+.hover-underline-animation:hover {
+  color: var(--luxury-gradient); /* Gradient color on hover */
+}
+
+/* Scroll effect on the hover animation */
+.scrolled .hover-underline-animation {
+  color: black;
+}
+
+/* Router link active state */
+a.router-link-exact-active p {
+  text-decoration: underline #fff;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
+}
+
+.hover-underline-animation:after {
+  height: 0;
+}
+
+/* Scroll down indicator styling */
+.scroll-text {
+  font-size: 1.5rem;
+  color: var(--luxury-glow);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroll-text:hover {
+  transform: translateY(10px); /* Smooth downwards movement on hover */
+}
+
+/* Add smooth transition effect to the overlay when scrolling */
+.main-bg::after {
+  transition: background 0.5s ease;
+}
+
+#header.scrolled .main-bg::after {
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay when scrolled */
 }

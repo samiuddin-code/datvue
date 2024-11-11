@@ -8,40 +8,40 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "axios": "^1.7.7",
+    "babylonjs": "^7.33.0",
+    "babylonjs-loaders": "^7.33.0",
     "bootstrap": "^5.3.3",
+    "cesium": "^1.123.1",
     "core-js": "^3.6.5",
+    "dat.gui": "^0.7.9",
+    "globe.gl": "^2.33.1",
+    "three": "^0.170.0",
     "vue": "^3.2.16",
     "vue-class-component": "^8.0.0-0",
+    "vue-property-decorator": "^9.1.2",
     "vue-router": "^4.0.0-0",
     "webpack": "^5.0.0",
     "webpack-cli": "^4.0.0"
   },
   "devDependencies": {
+    "@types/three": "^0.169.0",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-router": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/compiler-sfc": "^3.5.12",
- 
-    
-
-
-
-
-  "eslint": "^8.0.0",
-  "eslint-plugin-vue": "^9.0.0",
-"@vue/eslint-config-typescript": "^13.0.0",
-
-
-
-
-    
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "eslint": "^8.0.0",
     "eslint-define-config": "^2.1.0",
-
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-vue": "^9.0.0",
     "postcss": "^8.4.47",
-    "sass": "^1.80.5",
-    "sass-loader": "^16.0.2",
+    "sass": "^1.80.6",
+    "sass-loader": "^16.0.3",
     "typescript": "^5.6.3",
     "vue-loader": "^17.4.2"
   },

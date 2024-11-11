@@ -34,7 +34,6 @@ import ExperiencesArticle from "@/components/ExperiencesArticle/ExperiencesArtic
     this.elements = {
       boldText: "Unforgettable",
       lightText: "experiences",
-      // video: "https://youtu.be/pQrgAaNOW_c",
        video: require("@/assets/experiences.mp4"),
       introParas: [
         " Memorable days. Exceptional nights. We believe it’s our mission to ",

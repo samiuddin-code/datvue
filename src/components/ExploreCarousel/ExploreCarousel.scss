@@ -43,33 +43,73 @@
         padding-bottom: 2.5rem;
       }
   }
-  .button-pair button {
+  // .button-pair button {
+  //   width: 5rem;
+  //   height: 5rem;
+  //   border-radius: 50%;
+  //   border: 0;
+  //   outline: 0;
+  //   cursor: pointer;
+  //   background-color: white;
+  //   color: black;
+  //   box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+  //   font-size: 2rem;
+    
+  //   @media screen and (max-width: 500px) {
+  //       width: 3.5rem;
+  //       height: 3.5rem;
+  //       font-size: 1.5rem;
+  //   }
+  // }
+  // .button-pair .left-button {
+  //   margin-right: 1.5rem;
+  // }
+  // .button-pair button:hover {
+  //   background-color: black;
+  //   color: white;
+  //   transition: background-color 1s ease;
+  // }
+}
+.button-pair {
+  display: flex;
+  justify-content: flex-end;    // Align buttons to the right
+  gap: 1.5rem;
+  margin: 2rem 2rem 2rem auto;  // Add space from the bottom and right side
+
+  button {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     cursor: pointer;
-    background-color: white;
-    color: black;
-    box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 8px 14px rgba(211, 211, 211, 0.5);
     font-size: 2rem;
-    
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
     @media screen and (max-width: 500px) {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      font-size: 1.5rem;
     }
   }
-  .button-pair .left-button {
+
+  .left-button {
     margin-right: 1.5rem;
   }
-  .button-pair button:hover {
-    background-color: black;
-    color: white;
-    transition: background-color 1s ease;
-  }
 }
+
+
+
+
 .image-holder {
   width: 25vw;
   height: 72vh;

@@ -20,8 +20,8 @@
         </div>
       </div>
       <div class="right-part img1">
-          <img :src="image" alt="Image" />
-      </div>
+  <img src="../../assets/AboutDlc/p1.png" alt="Image">
+</div>
     </div>
   </section>
 </template>
