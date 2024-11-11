@@ -62,5 +62,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use "./navbar.scss";
+@use "./Navbar.scss";
 </style>
