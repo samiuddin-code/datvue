@@ -8,7 +8,7 @@ import { Options, Vue } from "vue-class-component";
       lands: [
         {
           continent: "North America & Caribbean",
-          globeImage: require("@/assets/Globe/globe.jpg"),
+          // globeImage: require("@/assets/Globe/globe.jpg"),
           locations: [
             {
               temperature: "73&deg; F",

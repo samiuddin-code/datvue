@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import '@fortawesome/fontawesome-free/css/all.css'
 const api = axios.create({
   baseURL: process.env.VUE_APP_API_DOMAIN, // Use the API domain from the environment variables
   headers: {

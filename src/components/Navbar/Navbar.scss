@@ -9,14 +9,7 @@
   --luxury-gradient: linear-gradient(135deg, #FF5C8F, #FF9F43); /* Stunning gradient */
   --luxury-glow: rgba(255, 255, 255, 0.7); /* Glow effect */
   --luxury-bg: rgba(0, 0, 0, 0.8); /* Dark background for scrolled state */
-}#header {
-  position: relative;
-  z-index: 9999;
-  padding: 1.5rem 3rem;
-  background-color: transparent;
-  transition: all 0.5s ease-in-out;
 }
-
 #nav-links a {
   color: #fff;
   font-family: "Average", serif;
@@ -43,6 +36,11 @@
 
 /* Fullscreen header */
 #header {
+  position: relative;
+  z-index: 9999;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +49,6 @@
   width: 100%;
   left: 0;
   top: 0;
-  padding: 3rem 6rem;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s ease, padding 0.3s ease;
@@ -69,6 +66,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Luxurious box shadow when scrolled */
 }
 
+
 /* Responsive header adjustments */
 @media screen and (max-width: 900px) {
   #header {
@@ -78,7 +76,7 @@
 
 /* Navigation bar styling */
 #nav {
-  width: 94%;
+  width: 85.3%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -201,16 +199,77 @@
   right: 10px;
   z-index: 5;
 }
-/* Logo */
 .logo {
-  width: 10rem;
-  transition: transform 0.3s ease;
+  width: 10rem; /* Default width */
+ 
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition for scaling */
 
+  /* Hover effect: subtle rotation */
   &:hover {
     transform: rotate(10deg); /* Subtle rotation effect on hover */
   }
 }
 
+/* Logo scaling effect when scrolled */
+#header.scrolled .logo {
+  padding-top: 10px;
+  transform: scale(2.5); /* Enlarge logo visually */
+  width: 6rem; /* Optional: increase width if needed */
+  height: 4rem; /* Increase height accordingly */
+}
+
+/* Keep header size fixed */
+#header {
+  position: relative;
+  z-index: 9999;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s ease, padding 0.3s ease;
+  will-change: background-color, color, padding;
+  box-shadow: none; /* No shadow by default */
+}
+
+/* When scrolled, change background and keep logo size fixed */
+#header.scrolled {
+  --text-color: black;
+  transition: background-color 1.5s ease, padding 1.5s ease;
+  --bg-color: white;
+  --hover-color: rgba(0, 0, 0, 0.7); /* Hover color when text is black */
+  padding: 1.5rem 6rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Luxurious box shadow when scrolled */
+}
+
+/* Keep logo's position fixed inside the header */
+#nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Adjustments for smaller screens */
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 8rem; /* Smaller size for mobile */
+    height: 3rem; /* Adjust height */
+  }
+
+  #header.scrolled .logo {
+    transform: scale(1.3); /* Slightly smaller scale on mobile */
+    width: 10rem; /* Adjust width */
+    height: 4rem; /* Adjust height */
+  }
+}
 /* Hover underline animation */
 .hover-underline-animation {
   display: inline-block;

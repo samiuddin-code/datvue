@@ -5,8 +5,79 @@
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
-  color: black;
+  color: #333333;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
 }
+
+
+.explore-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem; /* Increased gap for more space between elements */
+  width: 80%;
+  margin: 0 auto 4rem auto;
+  
+  span {
+    display: block;
+    text-align: left;
+    font-size: 4rem; /* Larger font for prominence */
+    font-family: "Average", serif;
+    font-weight: 100;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #222222;
+    @media screen and (max-width: 500px) {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem 2rem 3rem;
+  }
+}
+
+.button-pair {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin: 2rem 2rem 2rem auto;
+
+  button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 8px 14px rgba(211, 211, 211, 0.5);
+    font-size: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 3.5rem;
+      height: 3.5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .left-button {
+    margin-right: 0.5rem;
+  }
+}
+
+
 .explore-top {
   display: flex;
   flex-direction: row;
@@ -22,6 +93,8 @@
     margin: 0;
     line-height: 1.1;
     letter-spacing: 1px;
+    font-family: "Average", serif;
+    font-weight: 100;
     @media screen and (max-width: 500px) {
       font-size: 2.5rem;
     }
@@ -31,55 +104,18 @@
     align-items: flex-start;
     margin: 0 3rem 2rem 3rem;
   }
-  .header-first-half {
-    font-family: "Average", serif;
-    font-weight: 100;
-  }
-  .header-second-half {
-    font-weight: 200;
-  }
-  .explore-header{
-    @media screen and (max-width: 1024px) {
-        padding-bottom: 2.5rem;
-      }
-  }
-  // .button-pair button {
-  //   width: 5rem;
-  //   height: 5rem;
-  //   border-radius: 50%;
-  //   border: 0;
-  //   outline: 0;
-  //   cursor: pointer;
-  //   background-color: white;
-  //   color: black;
-  //   box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
-  //   font-size: 2rem;
-    
-  //   @media screen and (max-width: 500px) {
-  //       width: 3.5rem;
-  //       height: 3.5rem;
-  //       font-size: 1.5rem;
-  //   }
-  // }
-  // .button-pair .left-button {
-  //   margin-right: 1.5rem;
-  // }
-  // .button-pair button:hover {
-  //   background-color: black;
-  //   color: white;
-  //   transition: background-color 1s ease;
-  // }
 }
+
 .button-pair {
   display: flex;
-  justify-content: flex-end;    // Align buttons to the right
+  justify-content: flex-end;
   gap: 1.5rem;
-  margin: 2rem 2rem 2rem auto;  // Add space from the bottom and right side
+  margin: 2rem 2rem 2rem auto;
 
   button {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 80%;
     border: none;
     outline: none;
     cursor: pointer;
@@ -103,17 +139,20 @@
   }
 
   .left-button {
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
   }
 }
 
-
-
-
 .image-holder {
-  width: 25vw;
-  height: 72vh;
+  width: 30vw;
+  height: 80vh;
   margin: 2px -8px;
+  overflow: hidden;
+  position: relative;
+  // box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+
   @media screen and (max-width: 500px) {
     width: 55vw;
     height: 50vh;
@@ -131,15 +170,21 @@
     height: 65vh;
   }
 
-  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    background-color: #000;
+    object-fit:cover; /* Ensures the whole image is visible */
+    // background-color: #000;
     background-blend-mode: darken;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
   }
 }
+
 .img-description {
   position: absolute;
   bottom: 0;
@@ -151,6 +196,8 @@
   flex-direction: column;
   text-align: left;
   
+  background: rgba(0, 0, 0, 0.5); /* Slight dark background for readability */
+  
   @media screen and (max-width: 900px) {
     padding: 1.7rem 0;
   }
@@ -161,9 +208,9 @@
     color: #fff;
     font-size: 2rem;
     font-family: "Average", serif;
-    font-weight: 50;
+    font-weight: 500;
     @media screen and (max-width: 700px) {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -171,21 +218,17 @@
     font-size: 1rem;
     line-height: 1.5;
     white-space: normal;
-    color: #ffffffbf;
+    color: #ffffff;
   }
 }
 
+/* Slider Styles */
 @mixin white-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 $animationSpeed: 25s;
 
-// Animation
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -195,12 +238,11 @@ $animationSpeed: 25s;
   }
 }
 
-// Styling
 .slider {
   overflow: hidden;
   display: flex;
   width: 100%;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 
   &::before,
   &::after {
@@ -225,6 +267,7 @@ $animationSpeed: 25s;
     margin-right: 2rem;
     cursor: pointer;
   }
+
   .slider-track:hover {
     .image-holder img {
       transform: scale(1.1);

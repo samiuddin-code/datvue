@@ -3,7 +3,11 @@
     <div id="nav" :class="{ 'sticky-nav': isScrolled }">
       <div id="nav-logo" :class="{ 'is-toggled': isToggled }">
         <router-link @click="isToggled = false" to="/">
-          <img class="logo" src="../../assets/logo.png" alt="DAT" />
+          <img 
+            class="logo" 
+            :src="isScrolled ? require('../../assets/logoa.png') : require('../../assets/logob.png')" 
+            alt="DAT" 
+          />
         </router-link>
         <button class="nav-toggler" @click="toggleMenu">
           <svg width="16" height="16" fill="#fff" class="toggler-svg">
@@ -33,7 +37,6 @@
     </div>
   </div>
 </template>
-
 
 
 <script>

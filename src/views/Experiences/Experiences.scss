@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    z-index: -1;
   }
   .experiences-article{
     background-color: #f3f3f3;
@@ -10,5 +11,6 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+     z-index: 0;
   }
 }

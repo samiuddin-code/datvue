@@ -20,6 +20,7 @@
         <div class="bottom-left">
           <img :src="imgLeft" alt="Leisure" />
         </div>
+        
       </section>
     </div>
 </template>
